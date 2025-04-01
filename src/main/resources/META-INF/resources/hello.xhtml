@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+<h:head>
+    <title>JSF Scope Test</title>
+    <h:outputStylesheet name="css/example.css"/>
+</h:head>
+<h:body>
+
+    <h:form>
+        <h2>ViewScoped</h2>
+        <h:outputText value="#{helloWorldView.message}" />
+        <br/>
+        <h:commandButton value="Change ViewScoped Message"
+                         action="#{helloWorldView.changeMessage}" />
+        <br/><br/>
+
+        <h2>ViewScoped 2</h2>
+        <h:outputText value="#{helloWorldView2.message}" />
+        <br/>
+        <h:commandButton value="Change ViewScoped Message"
+                         action="#{helloWorldView2.changeMessage}" />
+
+        <h2>RequestScoped</h2>
+        <h:outputText value="#{helloWorldRequest.message}" />
+        <br/>
+        <h:commandButton value="Change RequestScoped Message"
+                         action="#{helloWorldRequest.changeMessage}" />
+    </h:form>
+
+</h:body>
+</html>
